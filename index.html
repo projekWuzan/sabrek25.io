@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Ucapan Ulang Tahun Sabrek</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ffc1cc, #ffe4ec, #ffdeeb);
+      position: relative;
+    }
+
+    .card {
+      position: relative;
+      z-index: 2;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      max-width: 800px;
+      max-height: 90vh;
+      overflow-y: auto;
+      margin: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.8em;
+      color: #ff4d6d;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      white-space: pre-line;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 10s linear infinite;
+      opacity: 0.7;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: inherit;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+      }
+      10% { opacity: 0.7; }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background hearts -->
+  <script>
+    function randomColor() {
+      const colors = ['#ff4d6d', '#ff85a1', '#ff9eb5', '#ffccd5', '#ff69b4'];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+      heart.style.background = randomColor();
+      heart.style.opacity = Math.random();
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <div class="card">
+    <h1>Selamat Ulang Tahun, Sabrekku Sayangkuh 💖</h1>
+    <p>
+      Semoga setiap langkahmu selalu dipenuhi kebahagiaan, cinta, dan keberkahan. 
+      Terima kasih karena kamu selalu memilih tetap singgah di palung cinta yang akhir dari ceritanya membingungkan ini, 
+      tapi aku tetap berdoa dan yakin bahwa kamulah yang akan menjadi rumah ternyamanku nanti, dan kita akan membuat semuanya menjadi kebahagiaan.
+
+      Mungkin selama hubungan ini banyak badai hujan dan rintangan yang kita lewati, 
+      namun percayalah aku tetap mencintaimu walaupun semesta selalu menyanyikan aku lagu *Mapala* dari Judika, 
+      tapi itu semua tak akan membuatku tumbang untuk mencintaimu sayang. 
+
+      Aku akan berusaha menjadi apa yang kamu mau, kita berusaha menjadi pribadi yang lebih baik dan saling mengerti satu sama lain 
+      agar cinta kita menjadi cinta yang abadi.
+
+      Mungkin saat aku kirim surat cinta ini yang kuketik dan kukirim di WA-mu, kamu sudah tertidur lelap karena ini sudah jam 01.56, 
+      tapi aku sengaja nunggu kamu tidur dulu karena aku ingin menjadi doa yang diam-diam memelukmu dalam setiap mimpimu 
+      dan menjadi malam yang selalu membuatmu nyaman dalam tidurmu.
+
+      Hehe mantep kan kata-kata akuhhh 🥰
+
+      Oh iya, aku jadi tahu kenapa aku udah lama gak liat pelangi di atas sana... 
+      Karena saat pelangi turun di rumah Titin dan kita berdua menyaksikannya, 
+      dia hanya datang menunjukkan dirinya sebentar saja, karena dia tahu ada ciptaan Tuhan yang lebih indah dari dia — dan itu adalah kamu, cintaaa.
+
+      Love youuuu 💕  
+      Dari orang terganteng di dunia:  
+      Agustinus Sandi Yudha Pratama M.
+    </p>
+  </div>
+
+  <!-- Musik autoplay -->
+  <audio autoplay loop controls>
+    <source src="lagucintawuxan25.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+</body>
+</html>
