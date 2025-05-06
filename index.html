@@ -144,9 +144,33 @@
   </div>
 
   <!-- Musik autoplay -->
-  <audio autoplay loop muted>
+  <audio id="musik" loop>
     <source src="lagucintawuxan25.mp3" type="audio/mpeg">
-    Your browser does not support the audio tag.
+    Browser Anda tidak mendukung audio.
   </audio>
+
+  <p>Scroll atau sentuh layar untuk mulai memutar musik 🎵</p>
+
+  <script>
+    const audio = document.getElementById("musik");
+
+    function mulaiMusik() {
+      audio.play().then(() => {
+        console.log("Musik diputar.");
+      }).catch((e) => {
+        console.log("Gagal memutar musik:", e);
+      });
+
+      // Hapus event listener biar nggak dijalankan berkali-kali
+      document.removeEventListener('click', mulaiMusik);
+      document.removeEventListener('scroll', mulaiMusik);
+      document.removeEventListener('touchstart', mulaiMusik);
+    }
+
+    // Dengarkan interaksi pertama
+    document.addEventListener('click', mulaiMusik);
+    document.addEventListener('scroll', mulaiMusik);
+    document.addEventListener('touchstart', mulaiMusik);
+  </script>
 </body>
 </html>
