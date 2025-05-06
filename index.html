@@ -145,33 +145,32 @@
 
   <!-- Musik autoplay -->
   <audio id="musik" controls loop>
-    <source src="lagucintawuxan25.mp3" type="audio/mpeg">
-    Browser Anda tidak mendukung audio.
-  </audio>
+  <source src="lagucintawuxan25.mp3" type="audio/mpeg">
+  Browser Anda tidak mendukung elemen audio.
+</audio>
 
-  <p>Scroll atau sentuh layar untuk mulai memutar musik 🎵</p>
+<p id="pesanMusik">Scroll atau sentuh layar untuk mulai memutar musik 🎵</p>
 
-  <script>
-    const audio = document.getElementById("musik");
+<script>
+  const audio = document.getElementById("musik");
 
-    function mulaiMusik() {
-       audio.volume = 0.8;
-      audio.play().then(() => {
-        console.log("Musik diputar.");
-      }).catch((e) => {
-        console.log("Gagal memutar musik:", e);
-      });
+  function mulaiMusik() {
+    audio.volume = 0.8;
+    audio.play().then(() => {
+      console.log("Musik diputar.");
+      document.getElementById("pesanMusik").style.display = "none";
+    }).catch((e) => {
+      console.log("Gagal memutar musik:", e);
+    });
 
-      // Hapus event listener biar nggak dijalankan berkali-kali
-      document.removeEventListener('click', mulaiMusik);
-      document.removeEventListener('scroll', mulaiMusik);
-      document.removeEventListener('touchstart', mulaiMusik);
-    }
+    document.removeEventListener('click', mulaiMusik);
+    document.removeEventListener('scroll', mulaiMusik);
+    document.removeEventListener('touchstart', mulaiMusik);
+  }
 
-    // Dengarkan interaksi pertama
-    document.addEventListener('click', mulaiMusik);
-    document.addEventListener('scroll', mulaiMusik);
-    document.addEventListener('touchstart', mulaiMusik);
-  </script>
+  document.addEventListener('click', mulaiMusik);
+  document.addEventListener('scroll', mulaiMusik);
+  document.addEventListener('touchstart', mulaiMusik);
+</script>
 </body>
 </html>
